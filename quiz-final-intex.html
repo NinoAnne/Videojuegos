@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Quiz Game</title>
+	<link rel="stylesheet" href="estilo.css">
+	<style type="text/css">
+	/*estilo de la pagina cambio de la letra*/
+	*{
+		box-sizing: border-box;
+		font-family: "Roboto", sans-serif;
+	}
+	body{
+		background: #f2f2f2;/*fondo clarito*/
+		color: #333;/*color del texto*/
+		margin: 0;
+		padding: 0;
+	}
+	/*estilo de la cabezera color de la caja y lineamento del texto*/
+	header{
+		text-align: center;
+		background: linear-gradient(135deg, #8e44ad,#3498db);/*degradado del"banner"*/
+		color:white;
+		padding: 6px 0;
+		font-size: 1.5rem;
+	}
+	header a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+	/*Contenedor del margen de la pagina*/
+	.container{
+		max-width: 700px;
+		margin: 30px auto;
+		padding: 20px;
+		background-color: white;
+		border-radius: 10px;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	}
+	/*estilo de las cajas de preguntas */
+	section{
+		border: 2px solid #652080 ;
+		border-radius: 10px ;
+		padding: 20px;
+		margin-bottom: 20px;
+		font-family: sans-serif;
+		background-color: #f8f9fa;
+	}
+	label{
+		display: block;
+		padding: 7px;
+		border-radius: 7px;
+		cursor: pointer;
+		border: 1px dashed #ccc;
+		margin-bottom: 8px 0;
+		font-family: sans-serif;
+	}
+	/*Color al seleccionar una pregunta*/
+	label:hover{
+		background:#7030A0;
+	}
+	/*Boton de corregir */
+	button{
+		width: 40%;
+		display: block;
+		margin: 30px auto;
+		padding: 15px;
+		font-family: sans-serif;
+		background-color: #76d7c8;
+		color: white;
+		border: none;
+		cursor: pointer;
+		border-radius: 25px;
+	}
+	/*Color al seleccionar el boton de corregir*/
+	button:hover{
+		background: #652080;
+		color: #fff;
+	}
+	/*Texto de las cantidades correctas*/
+	h2{
+		text-align: center;
+	}
+	/* va de la mano con las opciones de respuestas (onclick="respuesta (0,this)") */
+	#resultado{
+		font-size: 30px;
+		color: darkred;
+	}
+	</style>
+</head>
+<body>
+	<!--encabezado-->
+	<header>
+		<a href="evolucion.html">INICIO</a>
+    	<a href="historia.html">HISTORIA</a>
+    	<a href="pag_web.html">METAVERSO Y VR</a>
+    	<a href="IA.html">IA EN VIDEOJUEGOS</a>
+    	<a href="quiz-final-intex.html">QUIZ GAMER</a>
+		<h1>QUIZ GAME</h1>
+		<p>Short quiz</p>
+	</header>
+	<!--contenedor para las preguntas-->
+	<div class="container">
+		<!--seccion de preguntas (input) da las opciones de respuestas para seleccionar-->
+		<section id="p0">
+			<h3>1 -¿Cuál es la capital de Italia?</h3>
+			<label>
+				<input type="radio" value="1" name="p0" onclick="respuesta(0,this)">Roma
+			</label>
+			<label>
+				<input type="radio" value="2" name="p0" onclick="respuesta(0,this)">Turín
+			</label>
+			<label>
+				<input type="radio" value="3" name="p0" onclick="respuesta(0,this)">Nápoles
+			</label>
+		</section>
+
+		<!--seccion de preguntas (input) da las opciones de respuestas para seleccionar-->
+		<section id="p1">
+			<h3>2 -¿Quién pintó la Mona Lisa?</h3>
+			<label>
+				<input type="radio" value="1" name="p1" onclick="respuesta(1,this)">Vincent van Gogh
+			</label>
+			<label>
+				<input type="radio" value="2" name="p1" onclick="respuesta(1,this)">Leonardo da Vinci
+			</label>
+			<label>
+				<input type="radio" value="3" name="p1" onclick="respuesta(1,this)">Pablo Picasso
+			</label>
+		</section>
+		<!--Sección de preguntas-->
+		<section id="p2">
+			<h3>3 -¿Cuál es el planeta más grande del sistema solar?</h3>
+			<label>
+				<input type="radio" value="1" name="p2" onclick="respuesta(2,this)">Saturno
+			</label>
+			<label>
+				<input type="radio" value="2" name="p2" onclick="respuesta(2,this)">Marte
+			</label>
+			<label>
+				<input type="radio" value="3" name="p2" onclick="respuesta(2,this)">Júpiter
+			</label>
+		</section>
+
+		<!--sección de preguntas-->
+		<section id="p3">
+			<h3>4 -¿En qué año llegó el hombre a la luna?</h3>
+			<label>
+				<input type="radio" value="1" name="p3" onclick="respuesta(3,this)">1965
+			</label>
+			<label>
+				<input type="radio" value="2" name="p3" onclick="respuesta(3,this)">1972
+			</label>
+			<label>
+				<input type="radio" value="3" name="p3" onclick="respuesta(3,this)">1969
+			</label>
+		</section>
+
+		<!--sección de preguntas-->
+		<section id="p4">
+			<h3>5 -¿Cuál es el idioma más hablado del mundo?</h3>
+			<label>
+				<input type="radio" value="1" name="p4" onclick="respuesta(4,this)">Chino mandarín
+			</label>
+			<label>
+				<input type="radio" value="2" name="p4" onclick="respuesta(4,this)">Español
+			</label>
+			<label>
+				<input type="radio" value="3" name="p4" onclick="respuesta(4,this)">Inglés
+			</label>
+		</section>
+
+		<!--sección de preguntas-->
+		<section id="p5">
+			<h3>6 -¿Cuál es el océano más grande del mundo?</h3>
+			<label>
+				<input type="radio" value="1" name="p5" onclick="respuesta(5,this)">Atlántico
+			</label>
+			<label>
+				<input type="radio" value="2" name="p5" onclick="respuesta(5,this)">Índico
+			</label>
+			<label>
+				<input type="radio" value="3" name="p5" onclick="respuesta(5,this)">Pacífico
+			</label>
+		</section>
+
+		<!--Sección de botón y resultado-->
+		<button onclick="corregir()">CORREGIR</button>
+		<h2>Cantidad acertadas: <span id="resultado"></span></h2>
+	</div>
+
+	<script>
+	// arreglo que contiene las respuestas correctas
+	let correctas = [1, 2, 3, 3, 1, 3];
+
+	// arreglo donde se guarda las respuestas del usuario
+	let opcion_elegida = [];
+
+	let cantidad_correctas = 0;
+
+	// función que toma el num de preguntas y el input elegido de esa pregunta
+	function respuesta(num_pregunta, seleccionada) {
+		// guardo la respuesta elegida
+		opcion_elegida[num_pregunta] = seleccionada.value;
+
+		// armamos el id para seleccionar la sección correspondiente
+		let id = "p" + num_pregunta;
+		let section = document.getElementById(id);
+		let labels = section.getElementsByTagName("label");
+
+		// restablecer los colores de fondo a blanco
+		for (let label of labels) {
+			label.style.backgroundColor = "White";
+		}
+
+		// damos el color a label seleccionado
+		seleccionada.parentNode.style.backgroundColor = "#cec0fc";
+	}
+
+	// Función que corrige las respuestas
+	function corregir() {
+		cantidad_correctas = 0;
+
+		// Comprobación de las respuestas
+		for (let i = 0; i < correctas.length; i++) {
+			let section = document.getElementById("p" + i);
+			let labels = section.getElementsByTagName("label");
+
+			if (correctas[i] == opcion_elegida[i]) {
+				cantidad_correctas++;
+				labels[opcion_elegida[i] - 1].style.backgroundColor = "#76d7c8"; // color verde para respuestas correctas
+			} else {
+				labels[opcion_elegida[i] - 1].style.backgroundColor = "#f5b7b1"; // color rojo para respuestas incorrectas
+			}
+		}
+
+		// Mostrar los resultados
+		document.getElementById("resultado").innerHTML = cantidad_correctas;
+	}
+	</script>
+</body>
+</html>
